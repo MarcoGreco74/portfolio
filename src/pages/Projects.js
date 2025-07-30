@@ -8,6 +8,7 @@ const Projects = () => {
       title: "Gestionale Hotel",
       description: "Applicazione full-stack per la gestione di un hotel. Tecnologie: Java, Spring Boot, Spring Security, JPA/Hibernate, MySQL, React.js, Axios, Bootstrap, REST API",
       link: "https://github.com/MarcoGreco74/Software-Gestionale-Hotel",
+      demo: "https://youtu.be/8WcPkb6wtos"
     },
     {
       title: "Negozio Online",
