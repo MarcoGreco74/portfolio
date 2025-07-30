@@ -7,12 +7,12 @@ const Projects = () => {
     {
       title: "Gestionale Hotel",
       description: "Applicazione full-stack per la gestione di un hotel. Tecnologie: Java, Spring Boot, Spring Security, JPA/Hibernate, MySQL, React.js, Axios, Bootstrap, REST API",
-      link: "https://github.com/tuo-user/hotel-gestionale",
+      link: "https://github.com/MarcoGreco74/Software-Gestionale-Hotel",
     },
     {
       title: "Negozio Online",
       description: "E-commerce completo con carrello e pagamenti. Un progetto front-end con funzionalità di carrello e gestione prodotti, realizzato con HTML, CSS, JavaScript e PHP (per leggere i dati da un file CSV). I prodotti sono visualizzati in stile responsive con Bootstrap e permettono l'aggiunta al carrello, la modifica delle quantità e il salvataggio persistente nel localStorage.",
-      link: "https://github.com/tuo-user/negozio-online",
+      link: "https://github.com/MarcoGreco74/Negozio-online",
     },
     {
       title: "Ticket plattform",
