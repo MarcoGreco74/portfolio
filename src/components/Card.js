@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../styles/CardCss.css";
 
-const Card = ({ title, description, link }) => {
+const Card = ({ title, description, link, demo }) => {
   return (
     <motion.div
       className="card"
@@ -14,6 +14,9 @@ const Card = ({ title, description, link }) => {
       <h3>{title}</h3>
       <p>{description}</p>
       <a href={link} target="_blank" rel="noreferrer">GitHub</a>
+      {demo && (
+          <a href={demo} target="_blank" rel="noreferrer">Demo</a>
+        )}
     </motion.div>
   );
 };

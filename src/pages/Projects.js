@@ -32,7 +32,7 @@ const Projects = () => {
       <h2 style={{ color: "#053239ff", textAlign: "center" }}>I miei progetti</h2>
       <div className="project-grid">
         {projectData.map((proj, index) => (
-          <Card key={index} title={proj.title} description={proj.description} link={proj.link} />
+          <Card key={index} title={proj.title} description={proj.description} link={proj.link} demo={proj.demo} />
         ))}
       </div>
     </section>
