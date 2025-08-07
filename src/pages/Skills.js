@@ -8,7 +8,7 @@ function Skills() {
   ];
 
   return (
-    <section id="skills">
+    <section style={{color: "black"}} id="skills">
       <h2>Competenze</h2>
       <div className="skill-list">
         <h5>

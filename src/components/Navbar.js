@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <h1 className="logo">Marco Greco</h1>
-      <Link to="/" className="nav-link">Home</Link>
-      <Link to="/aboutMe" className="nav-link">About me</Link>
-      <Link to="/skills" className="nav-link">Skills</Link>
-      <Link to="/progetti" className="nav-link">Progetti</Link>
-      <Link to="/contatti" className="nav-link">Contatti</Link>
+      <NavLink to="/" className="nav-links">Home</NavLink>
+      <NavLink to="/aboutMe" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}>About me</NavLink>
+      <NavLink to="/skills" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}>Skills</NavLink>
+      <NavLink to="/progetti" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}>Progetti</NavLink>
+      <NavLink to="/contatti" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"} style={{marginRight: "30px"}}>Contatti</NavLink>
     </nav>
   );
 };
