@@ -8,8 +8,35 @@
   color: #44484d;
 }
 
-.hero p {
+/*.hero p {
   font-size: 1.2rem;
   margin-top: 0.5rem;
    color: #44484d;
+}*/
+
+@keyframes lampeggio {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #00f, 0 0 40px #00f;
+     color: rgba(255, 255, 255, 0.6);
+  }
+  100% {
+     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00f;
+     color: rgba(255, 255, 255, 1);
+  }
 }
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  animation: lampeggio 2.5s infinite ease-out;
+}
+
+
+
+
+
+

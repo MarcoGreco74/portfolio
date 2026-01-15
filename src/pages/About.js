@@ -3,10 +3,10 @@ import React from "react";
 
 function About() {
   return (
-    <section style={{color: "black"}} id="about">
+    <section style={{color: "black", margin:'100px'}} id="about">
       <h2>Chi sono</h2>
       <p >
-        Vivo a Cosenza da circa 3 anni dopo 10 anni di residenza a Bologna ed è lì che tutto è cominciato, 
+        Vivo a Cosenza da febbraio 2022 dopo 10 anni di residenza a Bologna ed è lì che tutto è cominciato, 
         nel lockdown del 2020, ma torno un attimo indietro.
       </p>
       <p>

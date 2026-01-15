@@ -37,9 +37,23 @@
   transition: all 0.3s ease;
 }
 
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 170, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(0, 255, 170, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 170, 0.3);
+  }
+}
+
 .cta:hover {
   background-color: #00ffaa;
   color: #0c0c0c;
+  animation: glowPulse 0.5s infinite;
+  transform: translateY(-10px) scale(1.03);
 }
 
 @keyframes glow {
