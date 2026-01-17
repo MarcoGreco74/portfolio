@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import "../styles/CardCss.css";
 
 function Skills() {
   const skills = [
@@ -8,7 +10,7 @@ function Skills() {
   ];
 
   return (
-    <section style={{color: "black", margin:'100px'}} id="skills">
+    <section>
       <h2>Competenze</h2>
       <div className="skill-list">
         <h5>
@@ -17,7 +19,14 @@ function Skills() {
         ))}
         </h5>
       </div>
-      <p>
+      <motion.div
+      className="card"
+      whileHover={{ scale: 1.05, rotate: 1 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ type: "spring", stiffness: 200 }}
+      style={{backgroundColor: "#1B1B1B"}}
+      >
+        <p>
         Dopo 20 anni di carriera di cui 15 nel settore alberghiero come receptionist, ho scelto di seguire la mia vera passione: la programmazione. 
         Ho iniziato come autodidatta nel 2021, immergendomi con entusiasmo nello studio dei linguaggi e delle tecnologie, fino a rivolgermi 
         a due tech academy  in due periodi diversi per consolidare il mio percorso formativo e avere un chiaro orientamento.
@@ -55,6 +64,7 @@ function Skills() {
         Attualmente sviluppo applicazioni web con tecnologie come Java, Spring Boot, React.js e MySQL, 
         con attenzione alla qualità del codice, all’esperienza utente e alla sicurezza.
       </p>
+      </motion.div>
     </section>
   );
 }

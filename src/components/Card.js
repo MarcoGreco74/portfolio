@@ -3,6 +3,20 @@ import { motion } from "framer-motion";
 import "../styles/CardCss.css";
 
 const Card = ({ title, description, link, demo }) => {
+  
+const linkDisplay = (() => {
+  switch (true) {
+    case link.includes("github"):
+      return "GitHub";
+    case link.includes("linkedin"):
+      return "LinkedIn";
+    case link.includes("@gmail"):
+      return "marcogreco.gibson@gmail.com";
+    default:
+      return "";
+  }
+})();
+
   return (
     <motion.div
       className="card"
@@ -13,7 +27,7 @@ const Card = ({ title, description, link, demo }) => {
     >
       <h3>{title}</h3>
       <p>{description}</p>
-      <a href={link} target="_blank" rel="noreferrer">GitHub</a>
+      <a href={link} target="_blank" rel="noreferrer">{linkDisplay}</a>
       {demo && (
           <a href={demo} target="_blank" rel="noreferrer">Demo</a>
         )}

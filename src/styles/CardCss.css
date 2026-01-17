@@ -12,6 +12,8 @@
 
 .card:hover {
   box-shadow: 0 20px 30px rgba(255, 106, 0, 0.25);
+  font-size: 25px;
+  max-width: 800px;
 }
 
 .card h3 {
