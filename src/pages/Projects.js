@@ -5,34 +5,65 @@ import "../styles/Projects.css";
 const Projects = () => {
   const projectData = [
     {
-      title: "Gestionale Hotel",
-      description: "Applicazione full-stack per la gestione di un hotel. Tecnologie: Java, Spring Boot, Spring Security, JPA/Hibernate, MySQL, React.js, Axios, Bootstrap, REST API",
+      title: "Gestionale Hotel con Java e Spring",
+      description: "Sviluppo di una web application full‑stack di tipo PMS per il settore alberghiero, progettata per centralizzare e automatizzare le operazioni quotidiane: gestione prenotazioni, check‑in/check‑out, tariffe e fatturazione. Implementate autenticazione utenti, API REST per l’integrazione frontend‑backend e database relazionale con relazioni complesse",
+      technologies: ["Java", "Spring Boot", "Spring Security", "JPA/Hibernate", "MySQL", "React", "REST API", "Axios"],
       link: "https://github.com/MarcoGreco74/Software-Gestionale-Hotel",
-      demo: "https://youtu.be/r6QAmAe3loI"
+      demo: "https://youtu.be/r6QAmAe3loI",
     },
     {
-      title: "Negozio Online",
-      description: "E-commerce completo con carrello e pagamenti. Un progetto front-end con funzionalità di carrello e gestione prodotti, realizzato con HTML, CSS, JavaScript e PHP (per leggere i dati da un file CSV). I prodotti sono visualizzati in stile responsive con Bootstrap e permettono l'aggiunta al carrello, la modifica delle quantità e il salvataggio persistente nel localStorage.",
-      link: "https://github.com/MarcoGreco74/Negozio-online",
+      title: "Gestionale Hotel con PHP e MySQL",
+      description: "Gestionale hotel leggero in PHP e MySQL/MariaDB. Il progetto copre un flusso essenziale di lavoro per una piccola struttura: prenotazioni, check-in, walk-in, camere in casa, addebiti e gestione degli stessi, pernottamenti BB e check-out.",
+      technologies: ["PHP 8.1", "MySQL", "JavaScript", "jQuery", "Ajax"],
+      link: "https://github.com/MarcoGreco74/Hotel",
     },
     {
-      title: "Ticket plattform",
-      description: "Realizzazione di un sistema full-stack per la gestione ticket di assistenza ad un prodotto con CRUD completo, gestione stato, note e logica di assegnazione operatori basata sulla disponibilità. Tecnologie: Java, Spring Boot, Spring Security, JPA/Hibernate, MySQL, Thymeleaf, Bootstrap, REST API.",
-      link: "https://github.com/MarcoGreco74/ticket-platform",
+      title: "Piattaforma Chat",
+      description: "Applicazione web PHP/MySQL per una chat tra utenti registrati. Il progetto usa un front controller centrale, viste PHP separate, endpoint API per le chiamate AJAX e JavaScript dedicato alla pagina chat.",
+      technologies: ["PHP 8.1", "MySQL", "JavaScript", "jQuery", "Ajax"],
+      link: "https://github.com/MarcoGreco74/Piattaforma-Chat",
+    },
+    {
+      title: "Ticket Platform",
+      description: "Sistema full-stack per la gestione di ticket di assistenza, con CRUD completo, stati, note e assegnazione operatori in base alla disponibilita.",
+      technologies: ["Java", "Spring Boot", "Spring Security", "MySQL", "Thymeleaf", "Bootstrap"],
+      link: "https://github.com/MarcoGreco74/Piattaforma-Chat",
     },
     {
       title: "Gestore eventi",
-      description: "Applicazione console in Java per la gestione di eventi e concerti, con prenotazioni, disdette, filtri e ordinamenti. Implementate logiche su capienza e date, interazione via terminale, OOP con ereditarietà e gestione delle eccezioni.",
+      description: "Applicazione console in Java per eventi e concerti, con prenotazioni, disdette, filtri, ordinamenti e gestione delle eccezioni.",
+      technologies: ["Java", "OOP", "Ereditarieta", "Exception handling"],
       link: "https://github.com/MarcoGreco74/java-gestore-eventi",
+    },
+    {
+      title: "Negozio Online",
+      description: "E-commerce responsive con catalogo prodotti, carrello persistente, modifica delle quantita e lettura dei dati prodotto da file CSV.",
+      technologies: ["HTML", "CSS", "JavaScript", "PHP", "Bootstrap", "localStorage"],
+      link: "https://github.com/MarcoGreco74/Negozio-online",
     },
   ];
 
   return (
     <section className="projects" id="projects">
-      <h2 style={{ color: "#053239ff", textAlign: "center" }}>I miei progetti</h2>
+      <div className="projects-header">
+        <span className="projects-kicker">Portfolio</span>
+        <h2>I miei progetti</h2>
+        <p>
+          Una selezione di applicazioni full-stack e progetti pratici, con focus su
+          gestione dati, interfacce responsive e logiche applicative reali.
+        </p>
+      </div>
+
       <div className="project-grid">
-        {projectData.map((proj, index) => (
-          <Card key={index} title={proj.title} description={proj.description} link={proj.link} demo={proj.demo} />
+        {projectData.map((proj) => (
+          <Card
+            key={proj.title}
+            title={proj.title}
+            description={proj.description}
+            technologies={proj.technologies}
+            link={proj.link}
+            demo={proj.demo}
+          />
         ))}
       </div>
     </section>

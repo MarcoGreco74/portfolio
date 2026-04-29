@@ -1,6 +1,6 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-//import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./pages/Projects";
@@ -16,6 +16,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Hero />
+        <Background />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/progetti" element={<Projects />} />

@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Home.css"; 
 import { Link } from 'react-router-dom';
+import NET from "vanta/dist/vanta.net.min";
 
 const Home = () => {
   return (
